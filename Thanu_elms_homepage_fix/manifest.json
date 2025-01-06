@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Thanu-elms Homepage Fix",
+  "version": "1.0",
+  "description": "Fixes broken image link in homepage of elms.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://elms.eng.ruh.ac.lk/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
